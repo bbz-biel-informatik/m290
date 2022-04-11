@@ -1,0 +1,15 @@
+{
+  "title": "Liniendiagramme",
+  "description": "Die einfachste Art von Diagrammen sind Liniendiagramme. Dieses Kapitel erklärt, wie du ein Liniendiagramm erstellen kannst.",
+  "steps": [
+    "Dein Code sollte zu Beginn ungefähr wie das Beispiel rechts aussehen. Eventuell hast du mehr oder anderen Code. Das spielt keine Rolle, solange du bei den folgenden Schritten den Code am entsprechenden Ort einfügst.",
+
+    "Erstelle zuerst auf der Website eine Element, in das das Diagramm eingefügt werden soll. Vergiss nicht, dem Element eine Klasse zu geben.",
+
+    "Verwende dann die `query`-Funktion, um eine Datenbankabfrage nach deinem Wunsch auszuführen.",
+
+    "Bevor wir das Diagramm zeichnen können, müssen wir das `canvas`-Element beschreibbar machen.",
+
+    "Nun können wir das Diagramm zeichnen. Der Code rechts zeichnet ein Liniendiagramm, verwendet als X-Achsen-Beschriftung das Messdatum und als Wert die zu diesem Zeitpunkt gemessene Temperatur."
+  ]
+}

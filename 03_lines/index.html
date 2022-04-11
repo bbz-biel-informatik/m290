@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titel</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.js"></script>
+  <script src="https://sensordb.bbz.cloud/scripts/v1/dblib.js"></script>
+</head>
+<body>
+
+  <h3>Durchschnittstemperatur</h3>                                                                <!-- start=2 -->
+  <p class="temp"></p>                                                                            <!-- start=2 -->
+
+  <script>
+
+  query("SELECT AVG(temperature) as temperatur FROM measurements WHERE sensor_id = 1", data => {  <!-- start=3 -->
+    document.querySelector(".temp").textContent = data[0].temperatur;                             <!-- start=4 -->
+  });                                                                                             <!-- start=3 -->
+
+  </script>
+</body>
+</html>
