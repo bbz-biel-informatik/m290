@@ -15,9 +15,9 @@
 
   <script>
 
-  query("SELECT AVG(temperature) as temperatur FROM measurements WHERE sensor_id = 1", data => {  /* start=3 */
-    document.querySelector(".temp").textContent = data[0].temperatur;                             /* start=4 */
-  });                                                                                             /* start=3 */
+  query("SELECT AVG(temperature) as temperatur FROM measurements WHERE sensor_id = 1", data => {  <!-- start=3 -->
+    document.querySelector(".temp").textContent = data[0].temperatur;                             <!-- start=4 -->
+  });                                                                                             <!-- start=3 -->
 
   </script>
 </body>
