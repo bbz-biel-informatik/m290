@@ -1,0 +1,11 @@
+{
+  "title": "Datenbankabfragen",
+  "description": "Die Datenbank kann mit wenigen Zeilen JavaScript abgefragt werden.",
+  "steps": [
+    "Mit der Funktion `query` kannst du eine Abfrage an die Datenbank senden.",
+
+    "Die Variable `data` enthält die Antwort der Datenbank. Darin sind alle Datensätze und alle Spalten enthalten.",
+
+    "Mit der Funktion `extract` kannst du die Werte einer einzelnen Spalte, z.B. die Temperatur, aus der Antwort extrahieren."
+  ]
+}
