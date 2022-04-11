@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titel</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.js"></script>
+  <script src="https://sensordb.bbz.cloud/scripts/v1/dblib.js"></script>
+</head>
+<body>
+
+  <canvas class="temp" width="200" height="200"></canvas>                                         <!-- start=2 -->
+
+  <script>
+
+  query("SELECT AVG(temperature) as temperatur, created_at::date FROM measurements WHERE sensor_id = 1 GROUP BY created_at::date", data => { <!-- start=3 -->
+    const ctx = document.querySelector('.temp').getContext('2d');                                 <!-- start=4 -->
+    const myChart = new Chart(ctx, {                                                              <!-- start=5 -->
+      type: 'bar',                                                                                <!-- start=5 -->
+      data: {                                                                                     <!-- start=5 -->
+        labels: extract(data, 'created_at'),                                                      <!-- start=5 -->
+        datasets: [{                                                                              <!-- start=5 -->
+          label: 'Temperatur',                                                                    <!-- start=5 -->
+          data: extract(data, 'temperatur'),                                                      <!-- start=5 -->
+          borderColor: 'rgb(75, 192, 192)'                                                        <!-- start=5 -->
+        }],                                                                                       <!-- start=5 -->
+      },                                                                                          <!-- start=5 -->
+      options: {                                                                                  <!-- start=6 -->
+        scales: {                                                                                 <!-- start=6 -->
+          y: {                                                                                    <!-- start=6 -->
+            beginAtZero: true                                                                     <!-- start=6 -->
+          }                                                                                       <!-- start=6 -->
+        }                                                                                         <!-- start=6 -->
+      }                                                                                           <!-- start=6 -->
+    });                                                                                           <!-- start=5 -->
+  });                                                                                             <!-- start=3 -->
+
+  </script>
+</body>
+</html>
