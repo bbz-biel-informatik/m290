@@ -10,23 +10,13 @@
 </head>
 <body>
 
-  <canvas class="temp" width="200" height="200"></canvas>                                         <!-- start=2 -->
+  <h3>Durchschnittstemperatur</h3>                                                                <!-- start=2 -->
+  <p class="temp"></p>                                                                            <!-- start=2 -->
 
   <script>
 
-  query("SELECT temperature, created_at FROM measurements WHERE sensor_id = 1", data => {         <!-- start=3 -->
-    const ctx = document.querySelector('.temp').getContext('2d');                                 <!-- start=4 -->
-    const myChart = new Chart(ctx, {                                                              <!-- start=5 -->
-      type: 'line',                                                                               <!-- start=5 -->
-      data: {                                                                                     <!-- start=5 -->
-        labels: extract(data, 'created_at'),                                                      <!-- start=5 -->
-        datasets: [{                                                                              <!-- start=5 -->
-          label: 'Temperatur',                                                                    <!-- start=5 -->
-          data: extract(data, 'temperature'),                                                     <!-- start=5 -->
-          borderColor: 'rgb(75, 192, 192)'                                                        <!-- start=5 -->
-        }],                                                                                       <!-- start=5 -->
-      }                                                                                           <!-- start=5 -->
-    });                                                                                           <!-- start=5 -->
+  query("SELECT AVG(temperature) as temperatur FROM measurements WHERE sensor_id = 1", data => {  <!-- start=3 -->
+    document.querySelector(".temp").textContent = data[0].temperatur;                             <!-- start=4 -->
   });                                                                                             <!-- start=3 -->
 
   </script>
