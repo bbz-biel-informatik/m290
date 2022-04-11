@@ -1,0 +1,11 @@
+{
+  "title": "Grundgerüst",
+  "description": "Dieses Kapitel zeigt den Code, der benötigt wird, um mit der Programmierung zu starten.",
+  "steps": [
+    "Erstelle zuerst die Datei `index.html` in deinem Projektordner. Sie wird den Grossteil des Codes enthalten.",
+
+    "Binde das Skript `dblib.js` ein. Es enthält Code, der die Verbindung mit der Datenbank vereinfacht.",
+
+    "Der unterste Abschnitt der Datei wird für den Javascript-Code verwendet. Stelle sicher, dass er immer ganz am Ende des `body`-Tags steht."
+  ]
+}
