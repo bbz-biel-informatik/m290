@@ -1,0 +1,13 @@
+{
+  "title": "Einzelwerte",
+  "description": "Einzelne Zahlen können sehr einfach auf der Website angezeigt werden",
+  "steps": [
+    "Dein Code sollte zu Beginn ungefähr wie das Beispiel rechts aussehen. Eventuell hast du mehr oder anderen Code. Das spielt keine Rolle, solange du bei den folgenden Schritten den Code am entsprechenden Ort einfügst.",
+
+    "Erstelle zuerst auf der Website eine Element, in das die Zahl eingetragen werden soll. Vergiss nicht, dem Element eine Klasse zu geben.",
+
+    "Verwende dann die `query`-Funktion, um eine Datenbankabfrage nach deinem Wunsch auszuführen.",
+
+    "In der Variable `data` befinden sich alle Zeilen der Datenbankabfrage. Wir verwenden nur die erste, und von dieser die Spalte `temperatur`."
+  ]
+}
