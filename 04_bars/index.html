@@ -14,7 +14,8 @@
 
   <script>
 
-  query("SELECT AVG(temperature) as temperatur, created_at::date FROM measurements WHERE sensor_id = 1 GROUP BY created_at::date", data => { <!-- start=3 -->
+  query("SELECT AVG(temperature) as temperatur, created_at::date FROM measurements " +            <!-- start=3 -->
+        "WHERE sensor_id = 1 GROUP BY created_at::date", data => {                                <!-- start=3 -->
     const ctx = document.querySelector('.temp').getContext('2d');                                 <!-- start=4 -->
     const myChart = new Chart(ctx, {                                                              <!-- start=5 -->
       type: 'bar',                                                                                <!-- start=5 -->
