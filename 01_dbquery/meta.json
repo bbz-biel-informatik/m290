@@ -6,6 +6,8 @@
 
     "Die Variable `data` enthält die Antwort der Datenbank. Darin sind alle Datensätze und alle Spalten enthalten.",
 
+    "Mit `data[0]` kannst du die erste Zeile der Antwort abfragen. Entsprechend mit `data[1]` die zweite Zeile, usw.",
+
     "Mit der Funktion `extract` kannst du die Werte einer einzelnen Spalte, z.B. die Temperatur, aus der Antwort extrahieren."
   ]
 }
